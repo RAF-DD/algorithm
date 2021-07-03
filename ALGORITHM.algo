@@ -1,0 +1,27 @@
+ALGORITHM readsent
+VAR
+ c : CHAR;
+ longphr: INTEGER:=0;
+ nombmots: INTEGER :=0;
+ nombvoyl: INTEGER :=0;
+ 
+BEGIN
+do
+writeln ('ecrire un caractére');
+ readln (c);
+ END_while(c!='.' and c!=' ')
+    longphr++;
+    if (c in ['a','e','i','o','u','y','A','E','I','O','U','Y']) then
+    nombvoyl++;
+    
+DO 
+ writeln ('ecrire un caractére');
+ readln (c);
+    longphr++;
+    if (c in ['a','e','i','o','u','y','A','E','I','O','U','Y']) then
+    nombvoyl++;
+    if (c=' ') then
+    nombmots++;
+ END_while(c='.')
+ writeln( longphr,nombmots,nombvoyl);
+END
